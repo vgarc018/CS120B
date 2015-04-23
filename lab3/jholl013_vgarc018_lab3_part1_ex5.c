@@ -2,7 +2,7 @@
  * James Hollister <jholl013@ucr.edu>
  * Virgilio Garcia <vgarc018@ucr.edu>
  * Lab Section: 23
- * Assignment: Lab #2 Part #1 Exercise #5
+ * Assignment: Lab #3 Part #1 Exercise #5
  *
  * I acknowledge all content contained herein, excluding template or example
  * code, is my own original work.
