@@ -32,6 +32,7 @@ unsigned char GetBit(unsigned char x, unsigned char k) {
 void tick_btn() {
     switch (BTN_State) {
         case BTN_INIT:
+			PORTC = 0x07;
             BTN_State = BTN_WAIT;
             break;
         case BTN_WAIT:
@@ -70,13 +71,17 @@ void tick_btn() {
     }
     
     switch (BTN_State) {
-        case BTN_START:
-            PORTB = SetBit(PORTB, 0, 1);
-            PORTB = SetBit(PORTB, 1, 0);
+        case BTN_INIT:
+			PORTC = 0x07;
             break;
-        case BTN_WAIT1:
-            PORTB = SetBit(PORTB, 0, 0);
-            PORTB = SetBit(PORTB, 1, 1);
+        case BTN_INC:
+            PORTC += 1;
+			break;
+		case BTN_DEC:
+			PORTC = PORTC - 1;
+			break;
+		case BTN_RESET:
+			PORTC = 0x00;
         default: break;
     }   
 }
@@ -85,10 +90,10 @@ int main(void)
     DDRA = 0x00;
     PORTA = 0xFF;
     
-    DDRB = 0xFF;
-    PORTB = 0x00;
+    DDRC = 0xFF;
+    PORTC = 0x00;
     
-    BTN_State = BTN_START;
+    BTN_State = BTN_INC;
     
     while(1)
     {
