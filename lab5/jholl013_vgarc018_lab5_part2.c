@@ -1,3 +1,13 @@
+/*
+ * James Hollister <jholl013@ucr.edu>
+ * Virgilio Garcia <vgarc018@ucr.edu>
+ * Lab Section: 23
+ * Assignment: Lab #5 Part #2
+ *
+ * I acknowledge all content contained herein, excluding template or example
+ * code, is my own original work.
+ */ 
+
 #include <avr/io.h>
 #include <avr/interrupt.h>
 

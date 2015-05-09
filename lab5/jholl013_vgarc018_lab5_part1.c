@@ -1,8 +1,12 @@
+
 /*
- * jholl013_vgarc018_lab5_part1.c
+ * James Hollister <jholl013@ucr.edu>
+ * Virgilio Garcia <vgarc018@ucr.edu>
+ * Lab Section: 23
+ * Assignment: Lab #5 Part #1
  *
- * Created: 4/30/2015 9:52:40 AM
- *  Author: Virgilio
+ * I acknowledge all content contained herein, excluding template or example
+ * code, is my own original work.
  */ 
 
 
