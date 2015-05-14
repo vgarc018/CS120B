@@ -31,23 +31,49 @@ int main(void) {
 
     unsigned short inVal;
 	unsigned char temp;
-	unsigned char MAX = 56;
+	unsigned short  MAX = ADC;
 	
     
     while(1) {
        inVal = ADC;
-	   temp = inVal;
+	   temp = (char)inVal;
        if( temp >= MAX )
 	   {
 		   PORTB = 0xFF;
 	   }
-       if(temp > (MAX-4) && temp < MAX)
+       if(temp > (MAX-8) && temp < MAX)
 	   {
 		   PORTB = 0x7F;
 	   }
-	   if(temp > (MAX-2) && temp < (MAX-1))
+	   if(temp > (MAX-16) && temp < (MAX-8))
 	   {
-		   PORTB = 0x7F;
+		   PORTB = 0x3F;
 	   }
-    }
+	   if(temp > (MAX-24) && temp < (MAX-16))
+	   {
+		   PORTB = 0x1F;
+	   }
+	   if(temp > (MAX-32) && temp < (MAX-24))
+	   {
+		   PORTB = 0x0F;
+	   }
+	   if(temp > (MAX-40) && temp < (MAX-32))
+	   {
+		   PORTB = 0x07;
+	   }
+	   if(temp > (MAX-48) && temp < (MAX-40))
+	   {
+		   PORTB = 0x03;
+	   }
+	   if(temp > (MAX-56) && temp < (MAX-48))
+	   {
+		   PORTB = 0x01;
+	   }
+	   if(temp > (MAX-64) && temp < (MAX-56))
+	   {
+		   PORTB = 0x00;
+	   }
+     
+     
+	}
 }
